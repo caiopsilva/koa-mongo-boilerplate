@@ -1,0 +1,31 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# IDE
+.idea
+.vscode
+
+# OS generated files
+.DS_Store
+.DS_Store?
+
+# Dependency directory
+node_modules
+
+# Optional npm cache directory
+.npm
+
+.tern-port
+
+# local .env* files
+.env.local
+.env.*.local
+
+coverage

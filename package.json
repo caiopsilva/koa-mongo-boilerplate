@@ -1,0 +1,56 @@
+{
+  "name": "cart-abandonment",
+  "version": "0.0.1",
+  "description": "A boilerplate to get started with Koa, MongoDB and Docker",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "lint": "eslint src --fix",
+    "format": "prettier --write 'src/**/*.js'",
+    "test": "NODE_ENV=test mocha './test/**/*.test.js'"
+  },
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "bcryptjs": "^2.4.3",
+    "debug": "^4.1.1",
+    "dotenv-flow": "^0.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-logger": "^3.2.0",
+    "koa-response-time": "^2.0.0",
+    "koa-router": "^7.2.1",
+    "mongoose": "^5.5.11",
+    "yup": "^0.21.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.4",
+    "mongodb-memory-server": "^5.1.2",
+    "nodemon": "^1.11.0",
+    "prettier": "^1.17.1",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "width": 100
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "config": {
+    "mongodbMemoryServer": {
+      "version": "4.0.3"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+version: '2'
+
+services:
+  mongo:
+    image: mongo:4.0
+    container_name: koaapi-db
+    volumes:
+      - "data_koaapi:/data/db"
+    ports:
+      - "27017:27017"
+    command: --smallfiles
+
+  api:
+    build:
+      context: .
+    container_name: koaapi
+    command: yarn run dev
+    volumes:
+      - .:/koa-mongo/api
+    ports:
+      - "3000:3000"
+    links:
+      - mongo
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://mongo:27017/appdb
+
+volumes:
+  data_koaapi:
